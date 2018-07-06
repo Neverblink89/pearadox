@@ -1,28 +1,229 @@
-.App {
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+}
+
+body {
+  font-family: "Gotham_SSm_4r", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000;
+  padding-top: 94px;
+}
+
+.global-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  z-index: 999;
+  height:94px;
+}
+
+.global-header .top-level-nav {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 6px;
+  margin-left: 50px;
+}
+
+ul, menu, dir {
+  display: block;
+  list-style-type: disc;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 40px;
+}
+
+ul {
+  font-family: "Gotham_SSm_3r", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 48px;
+    text-decoration: none;
+    color: #000;
+    transition: .1s color ease-in-out;
+}
+
+.global-header .top-level-nav li {
+  display: inline-block;
+  margin-left: 30px;
+}
+
+.global-header .top-level-nav li:first-child {
+  margin-left: 0;
+}
+
+.global-header .utility-nav li, .global-header .business-nav li {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  margin-left: 30px;
+
+}
+
+.global-header .utility-nav .header-cta, .global-header .business-nav .header-cta {
+  font-family: "Gotham_SSm_5r", Helvetica, Arial, sans-serif;
+  max-width: 196px;
+  line-height: normal;
+  padding: 15px 20px 14px;
+}
+
+.button-secondary, a:link.button-secondary, a:visited.button-secondary {
+  display: inline-block;
+  font-family: "Gotham_SSm_5r", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: normal;
+  text-decoration: none;
   text-align: center;
+  color: #000;
+  border: 2px solid #000;
+  border-radius: 4px;
+  min-width: 190px;
+  padding: 16px 16px 15px;
+  transition: .3s border ease-in-out, .3s color ease-in-out;
+  -webkit-font-smoothing: antialiased;
+  margin-right: 145px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.global-header .utility-nav, .global-header .business-nav {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-block;
+  float: right;
+  vertical-align: top;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.register {
+    padding-top: 141px;
+    padding-bottom: 141px;
+
 }
 
-.App-title {
-  font-size: 1.5em;
+.row {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.register .row {
+  position: relative;
 }
 
-.App-intro {
-  font-size: large;
+.register .container {
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.register .content {
+  flex: 4 1;
+}
+
+.register .divider-wrapper {
+  flex: 1 1;
+  align-self: stretch;
+  display: flex;
+  justify-content: center;
+}
+
+.register .sign-up {
+  flex: 4 1;
+  display: flex;
+  justify-content: center;
+}
+
+.dom-content-loaded .register .heading-rotation-container h1 {
+  opacity: 1;
+  transition: opacity 0.25s 4.75s;
+}
+
+h1 {
+  font-family: "Gotham_SSm_5r", Helvetica, Arial, sans-serif;
+  font-size: 60px;
+  line-height: 70px;
+}
+
+
+.register .divider {
+  width: 1px;
+  background-color: #f3f3f3;
+  margin: 50px 0;
+}
+
+.register form input[type=email], .register form input[type=password], .register form input[type=text]{
+  display: block;
+  background: #eef2f3;
+  border: 1px solid #eef2f3;
+  border-radius: 4px;
+  padding: 16px 12px 15px;
+  font-family: "Gotham_SSm_5r", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+}
+
+.register form input {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.register .sign-up-inner {
+  width: 360px;
+}
+
+.register .description {
+  margin-top: 25px;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.register .legal {
+  font-family: "Gotham_SSm_3r", Helvetica, Arial, sans-serif;
+  font-size: 11px;
+  color: #989898;
+  margin-top: 22px;
+}
+
+.register form input[type="submit"] {
+  font-size: 16px;
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.register form input {
+  width: 100%;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.submit-container {
+  position: relative;
+  margin: 15px 0 20px;
+}
+
+.button-primary, a:link.button-primary, a:visited.button-primary {
+  display: inline-block;
+  font-family: "Gotham_SSm_5r", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: normal;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  background: #2dbe60;
+  border: 0;
+  border-radius: 4px;
+  padding: 18px 20px 17px;
+  transition: .3s background ease-in-out;
+  -webkit-font-smoothing: antialiased;
+}
+
+.register h3 {
+  font-family: "Gotham_SSm_5r", Helvetica, Arial, sans-serif;
+  font-size: 23px;
+  line-height: 33px;
 }
